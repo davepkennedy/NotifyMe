@@ -8,8 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
+@property IBOutlet NSTextField* title;
+@property IBOutlet NSTextField* message;
+
+- (IBAction)sendNotification:(id)sender;
 
 @end
 
